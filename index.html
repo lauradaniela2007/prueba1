@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cafetería La Taza</title>
+  <meta name="description" content="Cafetería La Taza - café de especialidad, pastelería y ambiente acogedor" />
+  <style>
+    :root{ --bg:#fff6f0; --card:#ffffff; --accent:#6b4f3a; --accent-2:#c07b5a; --muted:#6b6b6b; --shadow: 0 8px 30px rgba(99,55,40,0.08);}    
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:#2b2b2b}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow)}
+    nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:var(--card);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+    h1{margin:0;font-size:clamp(26px,4vw,40px);color:var(--accent)}
+    p.lead{color:var(--muted);margin-top:10px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;margin-top:14px}
+    .photo{border-radius:12px;overflow:hidden}
+    .photo img{display:block;width:100%;height:100%;object-fit:cover}
+
+    .section{margin-top:32px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .menu-item{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow)}
+    .menu-item h4{margin:0 0 6px;color:var(--accent)}
+    .price{font-weight:800;color:var(--accent-2)}
+
+    .about{display:flex;gap:18px;align-items:center}
+    .about img{width:240px;border-radius:12px}
+
+    form{display:grid;gap:10px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6dcd6;font-size:15px}
+    .footer{margin-top:36px;padding:20px 0;color:var(--muted);text-align:center}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.menu-item{padding:14px}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}.nav{display:none}.hero{gap:12px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CT</div>
+        <div>
+          <div style="font-weight:800">Cafetería La Taza</div>
+          <div style="font-size:13px;color:var(--muted)">Café de especialidad • Pastelería artesanal</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#menu">Menú</a>
+        <a href="#sobre-nosotros">Sobre</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-card">
+            <h1>Despierta tus sentidos con nuestro café</h1>
+            <p class="lead">Cosechado con cariño y preparado con técnica. Ven y disfruta de espresso, capuchino, bebidas de temporada y pastelería fresca todos los días.</p>
+            <a class="btn" href="#menu">Ver Menú</a>
+            <div style="margin-top:16px;color:var(--muted);font-size:14px">Horario: Lun–Dom • 7:00 — 20:00</div>
+          </div>
+        </div>
+        <aside class="photo">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7b6d3a2b1a9f7b0e6c8d6e7f1a2c3e4a" alt="Taza de café"/>
+        </aside>
+      </section>
+
+      <section id="menu" class="section">
+        <h2 style="margin:0 0 12px;color:var(--accent)">Menú Destacado</h2>
+        <div class="grid">
+          <article class="menu-item">
+            <h4>Espresso</h4>
+            <div style="color:var(--muted);font-size:14px">Cuerpo intenso y crema sedosa</div>
+            <div class="price">$2.00</div>
+          </article>
+          <article class="menu-item">
+            <h4>Capuchino</h4>
+            <div style="color:var(--muted);font-size:14px">Espresso, leche espumosa, cacao</div>
+            <div class="price">$3.00</div>
+          </article>
+          <article class="menu-item">
+            <h4>Latte de Vainilla</h4>
+            <div style="color:var(--muted);font-size:14px">Suave y aromático</div>
+            <div class="price">$3.50</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="sobre-nosotros" class="section">
+        <h2 style="color:var(--accent);margin-bottom:8px">Sobre Nosotros</h2>
+        <div class="about">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a2b3c4d5e6f7a8b9c0d" alt="Interior de cafetería"/>
+          <div>
+            <p style="margin-top:0;color:var(--muted)">En Cafetería La Taza trabajamos con pequeños productores para ofrecer granos 100% arábica. Nuestro objetivo es crear un espacio cálido donde te sientas como en casa.</p>
+            <ul style="color:var(--muted);padding-left:18px">
+              <li>Origen trazable</li>
+              <li>Tostado artesanal</li>
+              <li>Opciones veganas y sin gluten</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section">
+        <h2 style="color:var(--accent);margin-bottom:8px">Contacto y Reserva</h2>
+        <div class="grid" style="grid-template-columns:1fr 1fr;">
+          <div class="menu-item">
+            <h4>Ubicación</h4>
+            <p style="color:var(--muted)">Calle Falsa 123, Centro</p>
+            <p style="color:var(--muted)">Tel: +57 300 000 0000</p>
+          </div>
+          <div class="menu-item">
+            <h4>Escríbenos</h4>
+            <form onsubmit="event.preventDefault(); alert('Gracias — mensaje enviado (demo)')">
+              <input type="text" name="nombre" placeholder="Nombre" required />
+              <input type="email" name="email" placeholder="Correo" required />
+              <textarea name="mensaje" placeholder="¿Quieres reservar una mesa?" rows="4"></textarea>
+              <button class="btn" type="submit" style="margin-top:8px">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      © <span id="year"></span> Cafetería La Taza — Hecho con ☕
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
